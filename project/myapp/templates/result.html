@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<h1>Q1 무슨 텍스트를 입력했는가? </h1>
+<h2>A1 : {{textname}} </h2><br>
+<h1>Q2 몇개의 단어로 구성 되어있는가?</h1>
+<h2>A2  : {{textcount}} </h2><br>
+<h1>Q3 단어의 종류와 갯수는 몇개인가?</h1>
+<h2>A3  : </h2>
+{% for text_key, text_value in text_dic %}
+<h2>{{text_key}} - {{text_value}}개 </h2><br>
+{% endfor %}
+
+{% endblock %}
